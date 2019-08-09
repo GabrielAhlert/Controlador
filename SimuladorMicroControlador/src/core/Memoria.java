@@ -8,8 +8,8 @@ package core;
 import java.util.ArrayList;
 
 /**
- *
- * @author Windows
+ *  
+ * @author Gabriel
  */
 public class Memoria {
     private ArrayList<String> dado;
