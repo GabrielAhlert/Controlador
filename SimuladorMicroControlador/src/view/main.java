@@ -63,7 +63,7 @@ public class main extends javax.swing.JFrame {
 
         jTextIn.setColumns(20);
         jTextIn.setRows(5);
-        jTextIn.setText("MOV R1, #4\nMOV &4, #50\nHALT");
+        jTextIn.setText("MOV R1, #4\nMOV &0, #0\nADD R1, #60\nADD &0, #1\nJBE R1, #400000\nGOTO 2\nHALT");
         jScrollPane1.setViewportView(jTextIn);
 
         jTableMem.setModel(new javax.swing.table.DefaultTableModel(

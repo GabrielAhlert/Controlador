@@ -93,7 +93,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="MOV R1, #4&#xa;MOV &amp;4, #50&#xa;HALT"/>
+            <Property name="text" type="java.lang.String" value="MOV R1, #4&#xa;MOV &amp;0, #0&#xa;ADD R1, #60&#xa;ADD &amp;0, #1&#xa;JBE R1, #400000&#xa;GOTO 2&#xa;HALT"/>
           </Properties>
         </Component>
       </SubComponents>
