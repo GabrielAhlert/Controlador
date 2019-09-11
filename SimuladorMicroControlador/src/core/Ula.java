@@ -16,6 +16,7 @@ public class Ula {
     //
     Memoria Mem = new Memoria(); 
     Registrador Reg = new Registrador();
+    SReg sreg = new SReg();
     RegistradoresEspeciais RegE = new RegistradoresEspeciais();
     ArrayList<String> lista = null;
     int valor2;
@@ -124,8 +125,18 @@ public class Ula {
                     if(Integer.valueOf(lista.get(posicao))>= valor2)
                         RegE.cipp();
                     break;
-                   
+            
             }
+            if(Integer.valueOf(lista.get(posicao))<0)
+                sreg.setSreg(0,1);
+            else
+                sreg.setSreg(0,0);
+            
+            
+            if(Integer.valueOf(lista.get(posicao))==0)
+                sreg.setSreg(1,1);
+            else
+                sreg.setSreg(1, 0);
             return true;    // ainda se a intrução não for nula 
         }                   // retorna verdadeiro
             return false;   // senão falso
@@ -137,6 +148,11 @@ public class Ula {
     public Memoria getMem() {
         return Mem;
     }
+
+    public SReg getSreg() {
+        return sreg;
+    }
+    
 
     public Registrador getReg() {
         return Reg;
